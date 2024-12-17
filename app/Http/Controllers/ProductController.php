@@ -12,11 +12,11 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-    return Inertia::render('Index', [
-        'products' => $this->products,
-    ]);
-}
+    {
+        return Inertia::render('Index', [
+            'products' => $this->products,
+        ]);
+    }
 
 
 
@@ -42,23 +42,15 @@ class ProductController extends Controller
      * Display the specified resource.
      */
 
-     public function show($id)
-{
-    $product = collect($this->products)->firstWhere('id', $id);
-    ($product);
+    public function show($id)
+    {
+        $product = collect($this->products)->firstWhere('id', $id);
 
-    if (!$product) {
-        abort(404, 'Product not found');
+        if (!$product) {
+            abort(404, 'Product not found');
+        }
+        return Inertia::render('Products/Show', ['product' => $product]);
     }
-
-    return Inertia::render('Show', [
-        'product' => $product,
-    ]);
-}
-
-
-
-
 
 
     /**
