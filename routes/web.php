@@ -27,9 +27,10 @@ Route::get('/greeting', function () {
 
 Route::get('/user/{id}', function (string $id) { return 'User '.$id;
 });
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show')
+->middleware(['auth', 'verified']);
 
 
 Route::get('/dashboard', function () {

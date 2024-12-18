@@ -11,15 +11,12 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return Inertia::render('Index', [
-            'products' => $this->products,
-        ]);
+     public function index()
+     {
+       return Inertia::render('Products/Index', [
+           'products' => $this->products,
+       ]);
     }
-
-
-
 
 
     /**
@@ -96,5 +93,66 @@ class ProductController extends Controller
             'description' => 'Portable tablet for everyday use',
             'price' => 500
         ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+        [
+            'id' => 4,
+            'name' => 'Mouse',
+            'description' => 'Portable tablet for everyday use',
+            'price' => 999
+        ],
+
     ];
 }
